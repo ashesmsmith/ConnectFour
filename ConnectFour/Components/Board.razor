@@ -1,21 +1,21 @@
 @using System.Drawing
 @inject GameState State
 
-<HeadContent>
+@* <HeadContent>
     <style>
         :root {
-            --board-bg:
-                @ColorTranslator.ToHtml(BoardColor)
+            --board-color:
+                @(BoardColor)
             ;
-            --player1:
-                @ColorTranslator.ToHtml(Player1Color)
+            --player1-color:
+                @(Player1Color)
             ;
-            --player2:
-                @ColorTranslator.ToHtml(Player2Color)
+            --player2-color:
+                @(Player2Color)
             ;
         }
     </style>
-</HeadContent>
+</HeadContent> *@
 
 <nav>
     @for (byte i = 0; i < 7; i++)
@@ -25,14 +25,11 @@
     }
 </nav>
 
-<article>
-    @winnerMessage <button style="@ResetStyle" @onclick="ResetGame">Reset the game</button>
-    <br />
-    <span class="alert-danger">@errorMessage</span>
-    <span class="alert-info">@CurrentTurn</span>
-</article>
-
-<div>
+<div style="
+    --board-bg:@BoardColor;
+    --player1:@Player1Color;
+    --player2:@Player2Color;
+">
     <div class="board">
         @for (var i = 0; i < 42; i++)
         {
@@ -43,9 +40,21 @@
     </div>
     @for (var i = 0; i < 42; i++)
     {
-        <span class="@pieces[i]"></span>
+        var piece = pieces[i] ?? "";
+
+        var color = piece.Contains("player1") ? Player1Color :
+        piece.Contains("player2") ? Player2Color : "transparent";
+
+        <span class="@piece" style="background-color:@color; box-shadow:0 0 0 4px @color"></span>
     }
 </div>
+
+<article>
+    @winnerMessage <button style="@ResetStyle" @onclick="ResetGame">Reset the game</button>
+    <br />
+    <span class="alert-danger">@errorMessage</span>
+    <span class="alert-info">@CurrentTurn</span>
+</article>
 
 @code {
     private string[] pieces = new string[42];
@@ -79,14 +88,9 @@
         };
     }
 
-    [Parameter]
-    public Color BoardColor { get; set; } = ColorTranslator.FromHtml("yellow");
-
-    [Parameter]
-    public Color Player1Color { get; set; } = ColorTranslator.FromHtml("red");
-
-    [Parameter]
-    public Color Player2Color { get; set; } = ColorTranslator.FromHtml("blue");
+    [Parameter] public string BoardColor { get; set; } = "#FFFF00"; // Default yellow
+    [Parameter] public string Player1Color { get; set; } = "#FF0000"; // Default red
+    [Parameter] public string Player2Color { get; set; } = "#0000FF"; // Default blue
 
 
     protected override void OnInitialized()

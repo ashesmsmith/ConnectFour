@@ -1,12 +1,26 @@
 ﻿@page "/"
+@rendermode InteractiveServer
 
 <PageTitle>Connect Four Home</PageTitle>
 
 <h3>Welcome to Connect Four!</h3>
 
-<Board @rendermode="InteractiveServer" BoardColor="System.Drawing.Color.Black" Player1Color="System.Drawing.Color.Green"
-    Player2Color="System.Drawing.Color.Purple" />
+<h4>Customize Your Game Colors</h4>
+<div>
+    <label for="boardColor">Board Color:</label>
+    <input type="color" id="boardColor" @bind="BoardColor" />
+
+    <label for="player1Color">Player 1 Color:</label>
+    <input type="color" id="player1Color" @bind="Player1Color" />
+
+    <label for="player2Color">Player 2 Color:</label>
+    <input type="color" id="player2Color" @bind="Player2Color" />
+</div>
+
+<Board BoardColor="@BoardColor" Player1Color="@Player1Color" Player2Color="@Player2Color" />
 
 @code {
-
+    private string BoardColor { get; set; } = "#FFFF00"; // Default yellow
+    private string Player1Color { get; set; } = "#FF0000"; // Default red
+    private string Player2Color { get; set; } = "#0000FF"; // Default blue
 }
