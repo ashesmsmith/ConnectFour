@@ -1,0 +1,14 @@
+﻿@page "/"
+
+<PageTitle>Connect Four Home</PageTitle>
+
+<h3>Welcome to Connect Four!</h3>
+
+<Board @rendermode="InteractiveServer" BoardColor="System.Drawing.Color.Black" Player1Color="System.Drawing.Color.Green"
+    Player2Color="System.Drawing.Color.Purple" />
+
+@code {
+    private string boardColor = "#FFFF00";
+    private string player1Color = "#FF0000";
+    private string player2Color = "#0000FF";
+}
