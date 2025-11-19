@@ -78,3 +78,4 @@ c:\Users\ashes\OneDrive\Documents\School\CSE 325 - .NET Software Development\Con
 c:\Users\ashes\OneDrive\Documents\School\CSE 325 - .NET Software Development\ConnectFour\ConnectFour\obj\Debug\net9.0\scopedcss\Components\Board.razor.rz.scp.css
 c:\Users\ashes\OneDrive\Documents\School\CSE 325 - .NET Software Development\ConnectFour\ConnectFour\obj\Debug\net9.0\compressed\8rgyt56fu5-ihqhlf2xtj.gz
 c:\Users\ashes\OneDrive\Documents\School\CSE 325 - .NET Software Development\ConnectFour\ConnectFour\obj\Debug\net9.0\compressed\i191p69b07-ihqhlf2xtj.gz
+c:\Users\ashes\OneDrive\Documents\School\CSE 325 - .NET Software Development\ConnectFour\ConnectFour\obj\Debug\net9.0\ConnectFour.sourcelink.json
