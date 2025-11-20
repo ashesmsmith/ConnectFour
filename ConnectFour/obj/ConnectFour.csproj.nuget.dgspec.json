@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\ashes\\OneDrive\\Documents\\School\\CSE 325 - .NET Software Development\\ConnectFour\\ConnectFour\\ConnectFour.csproj": {}
+    "C:\\Users\\ashes\\OneDrive\\Documents\\School\\CSE 325 - .NET Software Development\\ConnectFour\\ConnectFour\\ConnectFour.csproj": {}
   },
   "projects": {
-    "c:\\Users\\ashes\\OneDrive\\Documents\\School\\CSE 325 - .NET Software Development\\ConnectFour\\ConnectFour\\ConnectFour.csproj": {
+    "C:\\Users\\ashes\\OneDrive\\Documents\\School\\CSE 325 - .NET Software Development\\ConnectFour\\ConnectFour\\ConnectFour.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\ashes\\OneDrive\\Documents\\School\\CSE 325 - .NET Software Development\\ConnectFour\\ConnectFour\\ConnectFour.csproj",
+        "projectUniqueName": "C:\\Users\\ashes\\OneDrive\\Documents\\School\\CSE 325 - .NET Software Development\\ConnectFour\\ConnectFour\\ConnectFour.csproj",
         "projectName": "ConnectFour",
-        "projectPath": "c:\\Users\\ashes\\OneDrive\\Documents\\School\\CSE 325 - .NET Software Development\\ConnectFour\\ConnectFour\\ConnectFour.csproj",
+        "projectPath": "C:\\Users\\ashes\\OneDrive\\Documents\\School\\CSE 325 - .NET Software Development\\ConnectFour\\ConnectFour\\ConnectFour.csproj",
         "packagesPath": "C:\\Users\\ashes\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\ashes\\OneDrive\\Documents\\School\\CSE 325 - .NET Software Development\\ConnectFour\\ConnectFour\\obj\\",
+        "outputPath": "C:\\Users\\ashes\\OneDrive\\Documents\\School\\CSE 325 - .NET Software Development\\ConnectFour\\ConnectFour\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ashes\\AppData\\Roaming\\NuGet\\NuGet.Config"
