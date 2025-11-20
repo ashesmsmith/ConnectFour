@@ -1,22 +1,6 @@
 @using System.Drawing
 @inject GameState State
 
-@* <HeadContent>
-    <style>
-        :root {
-            --board-color:
-                @(BoardColor)
-            ;
-            --player1-color:
-                @(Player1Color)
-            ;
-            --player2-color:
-                @(Player2Color)
-            ;
-        }
-    </style>
-</HeadContent> *@
-
 <nav>
     @for (byte i = 0; i < 7; i++)
     {
@@ -25,6 +9,7 @@
     }
 </nav>
 
+@* Color values received from Home are injected into CSS variables *@
 <div style="
     --board-bg:@BoardColor;
     --player1:@Player1Color;
@@ -88,9 +73,10 @@
         };
     }
 
-    [Parameter] public string BoardColor { get; set; } = "#FFFF00"; // Default yellow
-    [Parameter] public string Player1Color { get; set; } = "#FF0000"; // Default red
-    [Parameter] public string Player2Color { get; set; } = "#0000FF"; // Default blue
+    @* Stores the color values sent from Home.razor *@
+    [Parameter] public string? BoardColor { get; set; }
+    [Parameter] public string? Player1Color { get; set; }
+    [Parameter] public string? Player2Color { get; set; }
 
 
     protected override void OnInitialized()

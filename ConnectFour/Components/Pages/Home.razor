@@ -6,6 +6,10 @@
 <h3>Welcome to Connect Four!</h3>
 
 <h4>Customize Your Game Colors</h4>
+
+@* User Color Selections/Input
+Begin with default colors listed in code section 
+When the user selects a new color, the value of the string is changed below using bind *@
 <div>
     <label for="boardColor">Board Color:</label>
     <input type="color" id="boardColor" @bind="BoardColor" />
@@ -17,6 +21,7 @@
     <input type="color" id="player2Color" @bind="Player2Color" />
 </div>
 
+@* The value of each color selection is passed to the board component *@
 <Board BoardColor="@BoardColor" Player1Color="@Player1Color" Player2Color="@Player2Color" />
 
 @code {
